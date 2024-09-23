@@ -5,6 +5,7 @@
 body {
   font-family: "Cairo", sans-serif;
   background-color: #EEEEEE;
+  font-size: 14px;
 }
 :root {
   --main-ba: #006a52;
@@ -68,6 +69,9 @@ body {
     height: 50px;
     margin: 18px 0px;
    
+}
+.butfliter {
+  margin: 10px 0;
 }
 .links{
     background-color: #DDDDDD;
@@ -235,7 +239,15 @@ th {
 .export-buttons {
     margin-top: 20px;
 }
-
+.tac{
+  font-size: 13px;
+  font-weight: bold;
+  color: black;
+}
+.tasd{
+  font-size: 14px;
+  color: black;
+}
 
 /* //media/// */
 /* //media/// */
@@ -276,9 +288,7 @@ th {
 .one {
   font-size: 16px;
 }
-.butfliter {
-  margin: 10px 0;
-}
+
 .box-one {
     background-color: var(--main-ba);
     width: 95%;
@@ -367,7 +377,7 @@ th {
 }
 .flex-big-gap{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 85px;
 }
 .font-bold{
@@ -414,9 +424,9 @@ th {
   text-align: center;
   color: var(--main-ba);
   padding: 12px;
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: none;
-  margin-top: 120px;
+  margin-top: 100px;
 
 }
