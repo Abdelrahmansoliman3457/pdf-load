@@ -1,11 +1,22 @@
 @font-face {
-  font-family: "Cairo";
-  src: url("../URW\ DIN\ Arabic\ Medium.ttf");
+  font-family: "mainfont";
+  src: url("../Hacen Liner Print-out Light.ttf");
+}
+@font-face {
+  font-family: "boldfont";
+  src: url("../alfont_com_خط-لاينر-عريض1.ttf");
 }
 body {
-  font-family: "Cairo", sans-serif;
+  font-family: "mainfont", sans-serif;
   background-color: #eeeeee;
   font-size: 14px;
+}
+body.show-pr{
+  font-family: "mainfont", sans-serif !important;
+}
+.font-bold{
+  font-family: "boldfont", sans-serif;
+
 }
 :root {
   --main-ba: #006a52;
@@ -309,57 +320,7 @@ th {
   }
 }
 
-@media print {
-  .show-me {
-    display: block !important;
-  }
-  body * {
-    visibility: hidden;
-    -webkit-print-color-adjust: exact;
-  }
-  .print-table,
-  .print-table *:not(.hide-with-print *) {
-    visibility: visible !important;
-    color: black;
-  }
-  .print-table {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-  .hide-with-print {
-    display: none;
-  }
-  @page {
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: 0;
-    /* margin-bottom: 0; */
-    size: A4;
-  }
-  body {
-    padding: 0;
-    margin: 0;
-    position: relative;
-  }
-  thead th {
-    background-color: var(--main-ba);
-    color: #fff !important;
-  }
-  th,
-  td {
-    white-space: normal;
-    text-align: center;
-  }
-  td:first-child {
-    min-width: 130px;
-  }
-  .box-details {
-    width: 100%;
-    box-shadow: none;
-  }
-}
+
 .flex-group-me {
   display: flex;
   align-items: center;
@@ -422,7 +383,7 @@ th {
   padding: 12px;
   width: 100%;
   margin: auto;
-  display: none;
+  /* display: none; */
   margin-top: 10px;
 }
 .show-pr .container {
@@ -431,4 +392,119 @@ th {
 .show-pr {
   flex-grow: 1;
   width: calc(100% + 80px);
+}
+
+
+@media print {
+  .show-me {
+    display: block !important;
+  }
+  body * {
+    visibility: hidden;
+    -webkit-print-color-adjust: exact;
+  }
+  .print-table,
+  .print-table *:not(.hide-with-print *) {
+    visibility: visible !important;
+    color: black;
+  }
+  .print-table {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .hide-with-print {
+    display: none;
+  }
+  @page {
+    margin-top: 10px;
+    margin-right: 0;
+    margin-left: 0;
+    /* margin-bottom: 0; */
+    size: landscape;
+    /* size: auto; */
+    margin-bottom: 10px;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-family: sans-serif;
+    padding-bottom: 70px;
+  }
+  thead th {
+    background-color: var(--main-ba);
+    color: #fff !important;
+  }
+  th,
+  td {
+    white-space: normal;
+    /* min-width: 70px; */
+    /* text-align: center; */
+  }
+  td:first-child {
+    min-width: 110px;
+  }
+  .box-details {
+    width: 100%;
+    box-shadow: none;
+  }
+  .change-style-show {
+    display: block !important;
+  }
+  table th {
+    background-color: #bdd7ce;
+    color: var(--main-ba) !important;
+    padding: 8px;
+  }
+   table td {
+    background-color: #fff;
+    color: #000;
+    padding: 8px;
+    min-height: 100px;
+    vertical-align: middle;
+  }
+ table td:first-child {
+    min-width: 150px;
+  }
+  table th:not(th:last-child) {
+    border-left: 1px solid var(--main-ba);
+  }
+  table td:not(td:last-child) {
+    border-left: 1px solid var(--main-ba);
+  }
+   table tr:nth-child(odd) td {
+    background-color: #ddd;
+  }
+
+   table {
+    margin-top: 0 !important;
+  }
+  .text-head-main{
+    color: #fff !important;
+  }
+  .footer-columns {
+    margin-block: 12px;
+    page-break-inside: avoid;
+    color: var(--main-ba) !important;
+}
+.empty-space {
+  height: 100px;
+  page-break-after: always; /* Optional: Force a page break after the empty space */
+}
+.foot-pdf{
+  /* bottom: -100px; */
+  page-break-inside: avoid;
+}
+table{
+  page-break-after: always;
+}
+}
+.foot-pdf{
+  display: none;
+  /* transform: translateX(-50%); */
+  width: 80% !important;
+  color: var(--main-ba) !important;
+  
 }
