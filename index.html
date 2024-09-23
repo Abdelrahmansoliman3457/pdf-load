@@ -12,7 +12,7 @@
     <title>Acounts</title>
 </head>
 
-<body>
+<body >
     <!-- ///navbar// -->
     <div class="navbar">
         <div class="logo text-end">
@@ -478,6 +478,7 @@
             $('.change-style-show').show();
             $('.foot-pdf').show();
             $('.bg-table').addClass('change-style');
+            $('body').addClass('show-pr');
             // document.querySelector('.change-style-show').style.display = 'block';
 
             html2canvas($(".table-print")[0], {
@@ -506,6 +507,7 @@
                 $('.change-style-show').hide();
                 $('.foot-pdf').hide();
                 $('.bg-table').removeClass('change-style');
+                $('body').removeClass('show-pr');
                 // document.querySelector('.change-style-show').style.display = 'none';
                 // $('.content-mrg button').show();
                 // $('.content-mrg a').show();
