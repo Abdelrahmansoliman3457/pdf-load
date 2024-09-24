@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       notes: "empty",
       reference: "134485977",
       operationCode: "",
-      credit: "empty",
+      credit: "",
       debit: "-0.08",
       balance: "8.94",
     },
