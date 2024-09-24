@@ -11,12 +11,11 @@ body {
   background-color: #eeeeee;
   font-size: 14px;
 }
-body.show-pr{
+body.show-pr {
   font-family: "mainfont", sans-serif !important;
 }
-.font-bold{
+.font-bold {
   font-family: "boldfont", sans-serif;
-
 }
 :root {
   --main-ba: #006a52;
@@ -320,7 +319,6 @@ th {
   }
 }
 
-
 .flex-group-me {
   display: flex;
   align-items: center;
@@ -343,6 +341,9 @@ th {
   background-color: var(--main-ba);
   color: #fff;
   margin-bottom: 0;
+  font-weight: bold;
+  font-size: 18px;
+  font-family:  "boldfont", sans-serif;
 }
 .change-style table th {
   background-color: #bdd7ce;
@@ -393,7 +394,6 @@ th {
   flex-grow: 1;
   width: calc(100% + 80px);
 }
-
 
 @media print {
   .show-me {
@@ -458,14 +458,14 @@ th {
     color: var(--main-ba) !important;
     padding: 8px;
   }
-   table td {
+  table td {
     background-color: #fff;
     color: #000;
     padding: 8px;
     min-height: 100px;
     vertical-align: middle;
   }
- table td:first-child {
+  table td:first-child {
     min-width: 150px;
   }
   table th:not(th:last-child) {
@@ -474,37 +474,46 @@ th {
   table td:not(td:last-child) {
     border-left: 1px solid var(--main-ba);
   }
-   table tr:nth-child(odd) td {
+  table tr:nth-child(odd) td {
     background-color: #ddd;
   }
 
-   table {
+  table {
     margin-top: 0 !important;
   }
-  .text-head-main{
+  .text-head-main {
     color: #fff !important;
   }
   .footer-columns {
     margin-block: 12px;
     page-break-inside: avoid;
     color: var(--main-ba) !important;
+  }
+  .empty-space {
+    height: 100px;
+    page-break-after: always; /* Optional: Force a page break after the empty space */
+  }
+  .foot-pdf {
+    /* bottom: -100px; */
+    page-break-inside: avoid;
+  }
+  table {
+    page-break-after: always;
+  }
 }
-.empty-space {
-  height: 100px;
-  page-break-after: always; /* Optional: Force a page break after the empty space */
-}
-.foot-pdf{
-  /* bottom: -100px; */
-  page-break-inside: avoid;
-}
-table{
-  page-break-after: always;
-}
-}
-.foot-pdf{
+.foot-pdf {
   display: none;
   /* transform: translateX(-50%); */
   width: 80% !important;
   color: var(--main-ba) !important;
-  
+}
+body.show-pr table td {
+  padding-block: 17px !important;
+}
+body table th {
+  font-weight: bold;
+  font-family:  "boldfont", sans-serif;
+}
+table{
+   margin-top: 0;
 }

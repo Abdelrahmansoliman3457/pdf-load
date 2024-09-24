@@ -106,32 +106,32 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 6,
       date: "2024-09-15",
       details: "تحويل داخلي صادر تحويل الى الاهل والاصدقاء 11100156095500",
-      notes: "",
+      notes: "empty",
       reference: "134485977",
       operationCode: "JM",
-      credit: "",
-      debit: "-4.00",
+      credit: "34",
+      debit: "",
       balance: "9.52",
     },
     {
       id: 7,
       date: "2024-09-16",
       details: "تحويل داخلي صادر تحويل الى الاهل والاصدقاء 11100156095500",
-      notes: "",
+      notes: "empty",
       reference: "134485977",
       operationCode: "JM",
-      credit: "",
-      debit: "-4.00",
+      credit: "23",
+      debit: "0",
       balance: "9.52",
     },
     {
       id: 8,
       date: "2024-09-17",
       details: "تحويل داخلي صادر تحويل الى الاهل والاصدقاء 11100156095500",
-      notes: "",
+      notes: "empty",
       reference: "134485977",
       operationCode: "JM",
-      credit: "",
+      credit: "33",
       debit: "-4.00",
       balance: "9.52",
     },
@@ -169,12 +169,12 @@ document.addEventListener("DOMContentLoaded", function () {
       tr.innerHTML = `
                 <td>${row.date}</td>
                 <td>${row.details}</td>
-                <td style="color: green;">${row.notes}</td>
+                <td class="emptycall" style="color: green;">${row.notes}</td>
 
                 <td>${row.reference}</td>
                 <td>${row.operationCode}</td>
-                <td>${row.credit}</td>
-                <td style="color: red ;">${row.debit}</td>
+                <td class="secondarr">${row.credit}</td>
+                <td class="thirdarr" style="color: red ;">${row.debit}</td>
                 <td>${row.balance}</td>
             `;
       tableBody.appendChild(tr);
