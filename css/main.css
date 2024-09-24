@@ -9,10 +9,11 @@
 body {
   font-family: "mainfont", sans-serif;
   background-color: #eeeeee;
-  font-size: 14px;
+  font-size: 13px !important;
 }
 body.show-pr {
   font-family: "mainfont", sans-serif !important;
+  font-size: 13px !important;
 }
 .font-bold {
   font-family: "boldfont", sans-serif;
@@ -358,7 +359,7 @@ th {
   vertical-align: middle;
 }
 .change-style table td:first-child {
-  min-width: 150px;
+  min-width: 130px;
 }
 .change-style table th:not(th:last-child) {
   border-left: 1px solid var(--main-ba);
@@ -516,4 +517,10 @@ body table th {
 }
 table{
    margin-top: 0;
+}
+body.show-pr table th{
+  min-width: 130px;
+}
+body.show-pr table td:nth-child(2){
+  max-width: 260px;
 }
