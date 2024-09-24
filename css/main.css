@@ -509,7 +509,7 @@ th {
   color: var(--main-ba) !important;
 }
 body.show-pr table td {
-  padding-block: 17px !important;
+  padding-block: 12px !important;
 }
 body table th {
   font-weight: bold;
