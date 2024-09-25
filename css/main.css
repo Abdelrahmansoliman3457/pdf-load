@@ -505,16 +505,16 @@ th {
 .foot-pdf {
   display: none;
   /* transform: translateX(-50%); */
-  width: 80% !important;
+  width: 50% !important;
   color: var(--main-ba) !important;
 }
 body.show-pr table td {
   padding-block: 12px !important;
 }
-body table th {
+/* body table th {
   font-weight: bold;
   font-family:  "boldfont", sans-serif;
-}
+} */
 table{
    margin-top: 0;
 }
@@ -523,4 +523,10 @@ body.show-pr table th{
 }
 body.show-pr table td:nth-child(2){
   max-width: 260px;
+}
+.thirdMad{
+  direction: ltr;
+}
+body.show-pr .box-right , body.show-pr .box-left{
+  display: none;
 }

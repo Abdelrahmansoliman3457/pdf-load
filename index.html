@@ -231,7 +231,7 @@
                                 </label>
                                 <div class="date-picker">
 
-                                    <input type="date" id="startDate" />
+                                    <input type="date" id="startDate"  />
                                     <label>إلى: </label>
                                     <input type="date" id="endDate" />
                                 </div>
@@ -291,7 +291,7 @@
                             <h3 class="text-end text-white"> تفاصيل نتائج البحث
                             </h3>
                             <div class="icons d-flex gap-3">
-                                <i class="fa-regular fa-file-pdf" data-file-name="كشف حساب" style="color: white;"></i>
+                                <i class="fa-regular fa-file-pdf" data-file-name="SNB_Report" style="color: white;"></i>
                                 <i class="fa-regular fa-file-excel" id="exportExcel" style="color: white;"></i>
                                 <i class="fa-regular fa-envelope" style="color: white;"></i>
                                 <i class="fa-solid fa-print" onclick="window.print()" style="color: white;"></i>
@@ -592,9 +592,34 @@
             var minutes = ('0' + date.getMinutes()).slice(-2);
 
 
-            $('.from-date').html($('#startDate').val());
-            $('.to-date').html($('#endDate').val());
-            $('.full-date').html(`${hours}:${minutes} - ${month}/${day}/${year}`);
+            let startDate = $('#startDate').val();
+            let endDate = $('#endDate').val();
+
+            let startDateFormat = new Date(startDate);
+            let endDateFormat = new Date(endDate);
+
+
+            const fromday = startDateFormat.getDate().toString().padStart(2, '0');
+            const frommonth = (startDateFormat.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+            const fromyear = startDateFormat.getFullYear();
+
+            //************************
+            const today = endDateFormat.getDate().toString().padStart(2, '0');
+            const tomonth = (endDateFormat.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+            const toyear = endDateFormat.getFullYear();
+
+
+
+
+            // $('.from-date').html($('#startDate').val());
+            $('.from-date').html(`${fromday}/${frommonth}/${fromyear}`);
+            // $('.to-date').html($('#endDate').val());
+            $('.to-date').html(`${today}/${tomonth}/${toyear}`);
+            $('.full-date').html(`${hours}:${minutes} - ${day}/${month}/${year}`);
+
+
+
+
 
 
 

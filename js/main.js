@@ -139,6 +139,8 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   function filterByDate() {
+    // new added solia
+    
     const startDate = startDateInput.value;
     const endDate = endDateInput.value;
     const filteredData = tableData.filter(
