@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
     data.forEach((row) => {
       const tr = document.createElement("tr");
       tr.innerHTML = `
-                <td>${row.date}</td>
+                <td>${ new Date(row.date).getDate().toString().padStart(2, '0') }/${(new Date(row.date).getMonth() + 1).toString().padStart(2, '0')}/${new Date(row.date).getFullYear()}</td>
                 <td>${row.details}</td>
                 <td class="emptycall" style="color: green;">${row.notes}</td>
 
