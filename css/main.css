@@ -519,10 +519,10 @@ table{
    margin-top: 0;
 }
 body.show-pr table th{
-  min-width: 130px;
+  min-width: 120px;
 }
 body.show-pr table td:nth-child(2){
-  max-width: 260px;
+  max-width: 250px;
 }
 .thirdMad{
   direction: ltr;
