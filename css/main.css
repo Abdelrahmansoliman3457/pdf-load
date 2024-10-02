@@ -19,7 +19,7 @@ body.show-pr {
   font-family: "boldfont", sans-serif;
 }
 :root {
-  --main-ba: #006a52;
+  --main-ba: #579e8e;
 }
 /* ///navbar/// */
 .navbar {
@@ -29,7 +29,7 @@ body.show-pr {
 }
 
 .logo-img {
-  max-width: 110px;
+  max-width: 90px;
   width: 100%;
   height: 100%;
 }
@@ -326,16 +326,14 @@ th {
   justify-content: center;
   gap: 10px;
 }
-.logo-main {
-  max-width: 200px;
-}
+
 .flex-big-gap {
   display: flex;
   /* align-items: center; */
   gap: 12px;
 }
 .font-bold {
-  font-weight: bold;
+  font-weight: bolder;
 }
 .text-head-main {
   padding: 10px;
@@ -370,9 +368,9 @@ th {
 .change-style table tr:nth-child(odd) td {
   background-color: #ddd;
 }
-.change-style-show {
+/* .change-style-show {
   display: none;
-}
+} */
 .change-style table {
   margin-top: 0 !important;
 }
@@ -503,13 +501,15 @@ th {
   }
 }
 .foot-pdf {
-  display: none;
+  /* display: none; */
   /* transform: translateX(-50%); */
-  width: 50% !important;
+  width: 100% !important;
   color: var(--main-ba) !important;
 }
 body.show-pr table td {
-  padding-block: 12px !important;
+  padding-block: 85px !important;
+  font-size: 23px;
+  
 }
 /* body table th {
   font-weight: bold;
@@ -520,6 +520,7 @@ table{
 }
 body.show-pr table th{
   min-width: 120px;
+  font-size: 20px;
 }
 body.show-pr table td:nth-child(2){
   max-width: 250px;
@@ -529,4 +530,79 @@ body.show-pr table td:nth-child(2){
 }
 body.show-pr .box-right , body.show-pr .box-left{
   display: none;
+}
+body.show-pr{
+  font-size: 16px !important;
+}
+
+
+
+
+
+/* new addedd style to table */
+.dt-buttons , .dataTables_filter , .dataTables_info{
+  display: none;
+}
+.table>:not(caption)>*>*{
+  padding: 15px !important;
+}
+.table thead th{
+  min-width: 100px;
+}
+
+
+/* .content-mrg , .content-mrg2{
+  display: none;
+} */
+
+
+
+.logo-main {
+  max-width: 90px;
+}
+.text-head-main {
+  padding: 4px 7px;
+  background-color: #016855;
+  color: #fff;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 16px;
+  font-family:  "boldfont", sans-serif;
+}
+
+
+
+
+.select-dedline{
+  width: 200px !important;
+}
+.gap-main{
+  gap: 8px;
+}
+.date-picker{
+  display: flex;
+  gap: 4px;
+}
+@media screen and (max-width: 992px) {
+  .date-picker input{
+    width: 100px;
+  }
+  .select-dedline{
+    width: 140px !important;
+  }
+  .foot-pdf{
+    font-size: 10px !important;
+  }
+}
+#tan{
+  overflow-x: auto;
+  overflow-y: clip;
+}
+@media screen and (max-width: 992px) {
+  .date-picker input {
+      width: 105px;
+  }
+  .box-details > .text-detilas{
+    gap: 12px !important;
+  }
 }
