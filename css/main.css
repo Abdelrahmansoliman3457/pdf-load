@@ -342,7 +342,7 @@ th {
   margin-bottom: 0;
   font-weight: bold;
   font-size: 18px;
-  font-family:  "boldfont", sans-serif;
+  font-family: "boldfont", sans-serif;
 }
 .change-style table th {
   background-color: #bdd7ce;
@@ -509,53 +509,48 @@ th {
 body.show-pr table td {
   padding-block: 85px !important;
   font-size: 23px;
-  
 }
 /* body table th {
   font-weight: bold;
   font-family:  "boldfont", sans-serif;
 } */
-table{
-   margin-top: 0;
+table {
+  margin-top: 0;
 }
-body.show-pr table th{
+body.show-pr table th {
   min-width: 120px;
   font-size: 20px;
 }
-body.show-pr table td:nth-child(2){
+body.show-pr table td:nth-child(2) {
   max-width: 250px;
 }
-.thirdMad{
+.thirdMad {
   direction: ltr;
 }
-body.show-pr .box-right , body.show-pr .box-left{
+body.show-pr .box-right,
+body.show-pr .box-left {
   display: none;
 }
-body.show-pr{
+body.show-pr {
   font-size: 16px !important;
 }
 
-
-
-
-
 /* new addedd style to table */
-.dt-buttons , .dataTables_filter , .dataTables_info{
+.dt-buttons,
+.dataTables_filter,
+.dataTables_info {
   display: none;
 }
-.table>:not(caption)>*>*{
+.table > :not(caption) > * > * {
   padding: 15px !important;
 }
-.table thead th{
+.table thead th {
   min-width: 100px;
 }
-
 
 /* .content-mrg , .content-mrg2{
   display: none;
 } */
-
-
 
 .logo-main {
   max-width: 90px;
@@ -567,42 +562,63 @@ body.show-pr{
   margin-bottom: 0;
   font-weight: bold;
   font-size: 16px;
-  font-family:  "boldfont", sans-serif;
+  font-family: "boldfont", sans-serif;
 }
 
-
-
-
-.select-dedline{
+.select-dedline {
   width: 200px !important;
 }
-.gap-main{
+.gap-main {
   gap: 8px;
 }
-.date-picker{
+.date-picker {
   display: flex;
   gap: 4px;
 }
 @media screen and (max-width: 992px) {
-  .date-picker input{
+  .date-picker input {
     width: 100px;
   }
-  .select-dedline{
+  .select-dedline {
     width: 140px !important;
   }
-  .foot-pdf{
+  .foot-pdf {
     font-size: 10px !important;
   }
 }
-#tan{
+#tan {
   overflow-x: auto;
   overflow-y: clip;
 }
 @media screen and (max-width: 992px) {
   .date-picker input {
-      width: 105px;
+    width: 105px;
   }
-  .box-details > .text-detilas{
+  .box-details > .text-detilas {
     gap: 12px !important;
+  }
+}
+
+/* new task */
+.account {
+  flex: 1;
+}
+.loader-pdf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 16px;
+}
+@media screen and (max-width: 992px) {
+  #tan {
+    width: 100vw !important;
   }
 }
